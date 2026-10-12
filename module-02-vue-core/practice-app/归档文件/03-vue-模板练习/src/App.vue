@@ -1,5 +1,5 @@
 <script setup>
-import Toggle from './MP2.vue'
+import Toggle from './learn-vue/02-属性绑定.vue'
 </script>
 
 <template>

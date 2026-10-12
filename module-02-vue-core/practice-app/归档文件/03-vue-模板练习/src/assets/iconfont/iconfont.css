@@ -1,0 +1,58 @@
+/* ==========================================================================
+   iconfont 字体图标 —— 阿里图标库（项目 id 5237229）
+   来源：//at.alicdn.com/t/c/font_5237229_nix1w8ywyj.css
+
+   ⚠️ 注意：在线链接仅供平台体验和调试使用。
+      正式项目请到 iconfont 项目页「下载至本地」，把下面 3 个 url()
+      换成本地字体文件（iconfont.woff2 / .woff / .ttf），这样离线也能用。
+   ========================================================================== */
+
+@font-face {
+  font-family: "iconfont";
+  src: url("https://at.alicdn.com/t/c/font_5237229_nix1w8ywyj.woff2?t=1789981712994") format("woff2"),
+       url("https://at.alicdn.com/t/c/font_5237229_nix1w8ywyj.woff?t=1789981712994") format("woff"),
+       url("https://at.alicdn.com/t/c/font_5237229_nix1w8ywyj.ttf?t=1789981712994") format("truetype");
+}
+
+/* 基础类：每个图标都必须带上 iconfont 这个 class，否则字体不生效 */
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------------- 本项目里的 8 个图标 ------------------- */
+
+.icon-caihongyun:before {
+  content: "\e78b";
+}
+
+.icon-caihongyunyun:before {
+  content: "\e78c";
+}
+
+.icon-haixing:before {
+  content: "\e78d";
+}
+
+.icon-kafei:before {
+  content: "\e78e";
+}
+
+.icon-a-kafei2:before {
+  content: "\e78f";
+}
+
+.icon-huahua:before {
+  content: "\e790";
+}
+
+.icon-lamian:before {
+  content: "\e791";
+}
+
+.icon-zhinengshouji:before {
+  content: "\e792";
+}

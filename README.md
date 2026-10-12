@@ -1,189 +1,112 @@
-# 前端工程化学习仓库 | Frontend Engineering Study
+# 前端工程化开发 · 课程代码仓库
 
-**⭐ 专注前端工程化体系学习、实战与总结，从零搭建标准化、现代化前端项目架构**
+《前端工程化开发》配套代码仓库，按课程的 12 个单元组织。每个单元的课堂任务、练习代码、案例实现放在对应目录，随课程进度逐步补全。
 
-**仓库定位**：系统化梳理前端工程化核心知识，整合脚手架、构建工具、模块化、规范化、自动化、性能优化、CI/CD 全链路内容，配套实战案例与落地模板，适合前端进阶、架构能力提升。
+| 项目 | 内容 |
+| --- | --- |
+| 课程 | 前端工程化开发 |
+| 学时 | 48 学时 · 12 周 × 4 学时 |
+| 技术栈 | Vue 3 + Vite + Vue Router + Pinia + Element Plus |
+| 适用专业 | 软件工程技术（职业本科） |
+| 先修课程 | Web 前端基础 |
+| 后续课程 | Web 应用系统综合实训 |
 
-**更新状态**：持续更新中 | 涵盖基础 - 进阶 - 实战 - 架构全阶段
+## 仓库结构
 
-## 📚 目录导航
+```
+frontend-learning/
+├── docs/                       课程资料：环境自检清单、问题记录表
+├── templates/                  工程模板（单元 1-3 产出，后续实训的起点）
+│   └── vue3-vite-starter/      含构建配置、规范配置、提交钩子
+├── module-01-toolchain/        模块一 · 工程化认知与工具链（12 学时，第 1-3 周）
+│   ├── unit-01-env/            单元 1 环境自检、学习路线图
+│   ├── unit-02-package-vite/   单元 2 依赖排查单、vite.config.js
+│   └── unit-03-quality-git/    单元 3 规范治理、提交钩子、流水线配置
+├── module-02-vue-core/         模块二 · Vue 3 核心基础（12 学时，第 4-6 周）
+│   └── practice-app/           课堂练习工程，src/views 内按单元分组
+├── module-03-components/       模块三 · 组件化开发（8 学时，第 7-8 周）
+│   └── practice-app/           自研组件与组合式函数
+├── module-04-architecture/     模块四 · 应用架构（8 学时，第 9-10 周）
+│   └── practice-app/           路由、状态、请求层
+├── cases/                      案例库，10 个案例分三档难度
+├── campus-activity-admin/      综合项目 · 校园活动服务平台（管理端）
+└── uniapp-port/                跨端拓展 · uni-app 移植
+```
 
-- [1. 核心概念](https://www.doubao.cn)
-- [2. 技术栈体系](https://www.doubao.cn)
-- [3. 核心模块实战](https://www.doubao.cn)
-- [4. 学习路线](https://www.doubao.cn)
-- [5. 开箱即用项目模板](https://www.doubao.cn)
-- [6. 常见问题与解决方案](https://www.doubao.cn)
-- [7. 优质资源汇总](https://www.doubao.cn)
+## 单元与代码的对应关系
 
-## 1. 核心概念
+| 周次 | 单元 | 主题 | 代码位置 | 课堂产出 |
+| --- | --- | --- | --- | --- |
+| 第 1 周 | 1 | 工程化认知、学习路线与开发环境 | `module-01-toolchain/unit-01-env/` | 环境自检报告、学习路线图 |
+| 第 2 周 | 2 | Node.js 生态、包管理与构建工具 | `module-01-toolchain/unit-02-package-vite/` | 依赖排查单、可复用的 vite.config.js |
+| 第 3 周 | 3 | 工程规范、质量保障与 Git 协作 | `module-01-toolchain/unit-03-quality-git/` | 带校验钩子的工程模板、合并请求 + 流水线 |
+| 第 4 周 | 4 | 模板语法与响应式基础 | `module-02-vue-core/practice-app/src/views/unit-04/` | 个人名片页 |
+| 第 5 周 | 5 | 计算属性、侦听器与渲染控制 | `module-02-vue-core/practice-app/src/views/unit-05/` | 数据表格、待办清单 |
+| 第 6 周 | 6 | 用户交互与表单绑定 | `module-02-vue-core/practice-app/src/views/unit-06/` | 多步表单、Markdown 编辑器 |
+| 第 7 周 | 7 | 组件基础与父子通信 | `module-03-components/practice-app/src/components/` | 卡片组件、可自定义单元格的表格 |
+| 第 8 周 | 8 | 组件进阶与逻辑复用 | `module-03-components/practice-app/src/composables/` | 弹窗与全局通知、组合式函数集 |
+| 第 9 周 | 9 | 路由 Vue Router 与登录鉴权 | `module-04-architecture/practice-app/src/router/` | 带鉴权的页面骨架 |
+| 第 10 周 | 10 | Pinia 状态管理与数据请求层 | `module-04-architecture/practice-app/src/stores/`、`src/api/` | 登录态模块、请求层封装 |
+| 第 11 周 | 11 | 项目启动与核心业务实现 | `campus-activity-admin/` | 需求规格、可运行骨架、三个业务页面 |
+| 第 12 周 | 12 | 联调、优化、部署与答辩 | `campus-activity-admin/` | 线上项目、交付文档 |
 
-### 1.1 什么是前端工程化
+模块五的编码工作从第 9 周开始落入综合项目，第 11、12 周把前面积累的页面收拢成完整应用。
 
-前端工程化是**将软件工程的思想、方法和工具引入前端开发**，通过标准化、自动化、模块化、规范化的手段，解决传统前端开发中代码混乱、复用率低、维护困难、构建低效、团队协作混乱等问题，实现前端项目的**可维护、可扩展、可复用、可迭代、可部署**。
+## 快速开始
 
-### 1.2 工程化解决的核心问题
+需要 Node.js 22.12 LTS 及以上，包管理器统一用 pnpm。
 
-- **代码混乱**：无统一规范、全局变量污染、代码耦合严重
-- **开发低效**：重复劳作、无热更新、手动压缩打包
-- **团队协作难**：代码风格不统一、提交规范混乱、冲突频发
-- **上线风险高**：无代码校验、无自动化测试、手动部署易出错
-- **项目迭代难**：无模块化、组件化，功能迭代牵一发而动全身
+```bash
+# 查看版本基线
+node -v && pnpm -v
 
-### 1.3 工程化四大核心目标
+# 安装依赖并启动练习工程
+cd module-02-vue-core/practice-app
+pnpm install
+pnpm dev
 
-1. **标准化**：代码规范、提交规范、目录规范、接口规范、版本规范
-2. **模块化/组件化**：代码拆分、按需复用、解耦业务逻辑
-3. **自动化**：自动构建、自动校验、自动测试、自动部署
-4. **精细化**：按需加载、分包构建、性能监控、产物优化
+# 构建产物并本地预览
+pnpm build && pnpm preview
+```
 
-## 2. 技术栈体系
+各子工程的运行方式见其目录内的 README。
 
-本仓库覆盖 **现代前端工程化全链路技术栈**，从基础工具到企业级架构，分层梳理：
+## 分支与提交约定
 
-### 2.1 基础核心
+| 分支 | 用途 |
+| --- | --- |
+| `main` | 稳定分支，只接受通过检查的合并 |
+| `feat/u<单元号>-<简述>` | 单个单元或功能的开发分支 |
+| `fix/<简述>` | 问题修复分支 |
 
-- **Node.js**：前端工程化底层基石，所有构建工具、脚本运行环境
-- **包管理器**：npm / yarn / pnpm（重点pnpm，现代项目首选）
-- **模块化规范**：ES Module / CommonJS / AMD / UMD
+提交信息按 Conventional Commits 格式书写，type 取 `feat`、`fix`、`docs`、`style`、`refactor`、`chore`、`test`。
 
-### 2.2 构建打包工具
+```
+feat(u05): 待办清单支持按状态筛选
+fix(u02): 修正 vite 代理配置导致的接口 404
+docs(u01): 补充环境自检清单
+```
 
-- **Webpack**：企业级老牌构建工具，生态最全、适配性最强
-- **Vite**：新一代极速构建工具，基于ESBuild，开发环境秒启动
-- **Rollup**：库打包首选，专注于JS/TS库、组件库构建
-- **ESBuild / SWC**：高性能编译构建工具，替代传统Babel
+提交前会自动执行 ESLint 与 Prettier 检查，检查不通过无法提交。
 
-### 2.3 代码规范与校验
+## 与考核的对应关系
 
-- **Eslint**：JS/TS 代码语法、质量校验
-- **Prettier**：代码格式化工具，统一代码风格
-- **Stylelint**：CSS/SCSS/Less 样式代码校验
-- **TypeScript**：静态类型校验，提升代码健壮性
+| 考核时点 | 考核动作 | 仓库里的证据 |
+| --- | --- | --- |
+| 第 3 周 | 工程模板验收 | `templates/vue3-vite-starter/` 可在干净环境跑通 |
+| 第 6 周 | 阶段小结 | `module-02-vue-core/practice-app/` 的提交记录 |
+| 第 10 周 | 路由与状态综合任务 | `module-04-architecture/practice-app/` 鉴权闭环 |
+| 第 12 周 | 项目答辩与互评 | `campus-activity-admin/` 源码、部署地址、交付文档 |
 
-### 2.4 提交与版本规范
+## 参考资源
 
-- **Git**：版本控制基础
-- **Husky**：Git钩子拦截，提交前执行校验脚本
-- **Lint-Staged**：只校验暂存区代码，提升校验效率
-- **Commitlint / Commitizen**：统一Git提交信息规范
-- **Standard-Version**：自动化版本迭代与日志生成
+| 类别 | 资料 |
+| --- | --- |
+| 框架 | Vue 官方文档（中文版）、Vue Router 文档、Pinia 文档 |
+| 构建 | Vite 官方文档 |
+| 组件库 | Element Plus 官方文档 |
+| 工具库 | VueUse 组合式函数集合 |
+| 质量 | ESLint、Prettier、Stylelint、Vitest 官方文档 |
+| 跨端 | uni-app 官方文档 |
 
-### 2.5 自动化测试
-
-- **Jest**：单元测试、集成测试框架
-- **Vitest**：Vite配套极速测试框架
-- **Testing-Library**：组件测试工具
-- **Cypress**：端到端(E2E)自动化测试
-
-### 2.6 CI/CD 自动化部署
-
-- **Github Actions**：免费自动化构建、测试、部署流水线
-- **Jenkins**：企业级私有化CI/CD工具
-- **静态部署**：Github Pages / Vercel / Netlify
-
-### 2.7 进阶工程化能力
-
--  **monorepo**：多包仓库管理（pnpm workspace / turborepo）
-- **组件库搭建**：从0搭建Vue/React组件库+文档站
-- **脚手架开发**：自定义CLI工具，快速生成项目模板
-- **性能优化**：分包、懒加载、缓存策略、构建提速
-- **产物分析**：bundle体积分析、冗余代码剔除
-
-## 3. 核心模块实战
-
-所有实战均提供**完整可运行代码 + 详细注释 + 踩坑记录**
-
-### 3.1 从零搭建基础工程
-
-- 手动搭建 Webpack5 + TS 项目
-- 手动搭建 Vite + Vue3/React 标准化项目
-- 配置多环境变量（开发/测试/生产）
-- 搭建通用目录结构、别名配置、资源适配
-
-### 3.2 规范化体系搭建
-
-- Eslint + Prettier 冲突解决与统一配置
-- Husky + Lint-Staged 提交前自动校验
-- Commitlint 规范git提交信息
-- 自动生成 CHANGELOG 版本日志
-
-### 3.3 构建优化实战
-
-- 构建速度优化：缓存、多线程、按需编译
-- 产物体积优化：Tree-Shaking、代码分割、压缩、去冗余
-- 静态资源优化：图片压缩、资源CDN、字体优化
-- 构建分析：可视化bundle依赖、定位大包文件
-
-### 3.4 高阶工程化实战
-
-- pnpm monorepo 多包项目管理实战
-- 自定义脚手架 CLI 开发与发布
-- 通用组件库、工具库从零搭建
-- Github Actions 自动构建部署流水线
-- 前端项目自动化测试落地
-
-## 4. 学习路线
-
-### 4.1 入门阶段（夯实基础）
-
-1. 掌握 Node.js 基础语法、文件操作、脚本运行
-2. 理解前端模块化核心原理
-3. 熟练使用 npm/pnpm 包管理工具
-4. 学会使用 Eslint、Prettier 基础配置
-
-### 4.2 进阶阶段（核心能力）
-
-1. 深入学习 Webpack/Vite 核心配置与原理
-2. 搭建完整项目规范化流程（代码+提交规范）
-3. 掌握多环境配置、构建优化、资源处理
-4. 了解前端自动化测试基础
-
-### 4.3 高阶阶段（架构能力）
-
-1. 理解构建工具核心编译、打包原理
-2. 掌握 monorepo 项目架构设计
-3. 实现自定义脚手架、插件、工程化工具
-4. 落地 CI/CD 全自动部署流程
-5. 具备项目工程化架构搭建与优化能力
-
-## 5. 开箱即用项目模板
-
-仓库内置多款**企业级标准化模板**，可直接克隆使用，无需重复配置：
-
-- **vite-vue3-ts-template**：Vite4 + Vue3 + TS + Eslint + Prettier + 规范流程完整模板
-- **vite-react-ts-template**：Vite + React18 + TS + 全规范工程模板
-- **webpack5-ts-template**：Webpack5 手动搭建TS通用项目模板
-- **monorepo-pnpm-template**：pnpm workspace 多包管理基础模板
-
-## 6. 常见问题与解决方案
-
-汇总工程化开发高频踩坑问题，持续更新：
-
-- Eslint 与 Prettier 格式化冲突解决方案
-- Vite/Webpack 构建速度慢、产物体积过大优化方案
-- Git 提交校验失败、钩子失效问题解决
-- 多环境变量配置失效、打包环境错乱问题
-- pnpm 依赖安装、幽灵依赖问题解决方案
-- Tree-Shaking 不生效的常见原因与修复
-
-## 7. 资源汇总
-
-### 7.1 官方文档
-
-- [Webpack 官方文档](https://webpack.js.org/)
-- [Vite 官方文档](https://vitejs.dev/)
-- [Eslint 官方文档](https://eslint.org/)
-- [pnpm 官方文档](https://pnpm.io/)
-
-### 7.2 学习资料
-
-- 前端工程化原理与实战笔记
-- 构建工具核心原理精讲
-- 企业级前端规范文档模板
-
-## ✨ 仓库愿景
-
-从零到一系统化掌握前端工程化，摆脱只会用脚手架、不懂底层原理的困境，具备**独立搭建、优化、维护企业级前端项目架构**的能力。
-
-**欢迎 Star / Fork / 提 Issue，持续共同完善！**
+自编教材《Vue 3 深入浅出实操教程》36 章，与本仓库逐单元对应。
